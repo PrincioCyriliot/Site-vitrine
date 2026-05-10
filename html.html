@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <link rel="icon" type="image/png" href="images/logo.png">
+        <img src="images/logo.png" alt="Logo" />
+        <ul>
+
+          <li><a href="#accueil" data-key="nav-accueil">Accueil</a></li>
+          <li><a href="#menu" data-key="nav-menu">Menu</a></li>
+          <li><a href="#apropos" data-key="nav-apropos">À propos</a></li>
+          <li><a href="#contact" data-key="nav-contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <button id="dark-mode-toggle" title="Changer le mode">🌙</button>
+          <select id="lang-switcher">
+            <option value="fr"> FR</option>
+            <option value="en"> EN</option>
+            <option value="mg"> MG</option>
+            <option value="km"> KM</option>
+            <option value="es"> ES</option>
+            <option value="zh"> CH</option>
+            <option value="ja"> JA</option>
+
+          </select>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <section id="accueil">
+    <h1 data-key="nav-accueil">Accueil</h1>
+    <p class="TITRE" data-key="accueil-titre"> Bienvenue au Gourmet -L'art de la cuisine malagasy</p>
+    <a href="#contact">
+
+      <button class="reserve" data-key="btn-reserver">Réserver une table</button></a>
+
+  </section>
+
+  <section id="menu">
+    <h2 data-key="nav-menu">Menu</h2>
+    <div class="menus">
+
+      <!-- premier plat-->
+      <div class="menu m">
+        <img src="images/dish1.jpg" alt="Poulet au parmesan">
+        <h3 data-key="plat1">Poulet au parmesan</h3>
+        <p class="prix">-5$</p>
+        <p data-key="plat1_det">-Spécialité locale au niveau de sa tendresse </p>
+        <!--, un plat qui vous ferait oublier vos problèmes -->
+      </div>
+
+      <!--Second plat-->
+      <div class="menu n">
+        <img src="images/dish2.jpg" alt="Projet 2">
+        <h3 data-key="plat2">Filet de canard</h3>
+        <p class="prix">-8$</p>
+        <p data-key="plat2_det">
+          - Mélange de savoir faire malagasy
+        </p>
+      </div>
+
+      <!--Troisieme plat-->
+      <div class="menu n">
+        <img src="images/magnific_ravitoto-et-riz-rustic-pl_2948151047.png" alt="Ravitoto">
+        <h3 data-key="plat3">Ravitoto</h3>
+        <p class="prix">-8$</p>
+        <p data-key="plat3_det">
+          -Classique culinaire malagasy
+        </p>
+      </div>
+
+      <!--quatrieme plat-->
+      <div class="menu n">
+        <img src="images/magnific_traditional-malagasy-meal_2948146484.png" alt="hena ritry">
+        <h3 data-key="plat4">Hena ritra</h3>
+        <p class="prix">-15$</p>
+        <p data-key="plat4_det">
+          -Viande de zebu
+        </p>
+      </div>
+
+      <!-- cinquieme plat-->
+      <div class="menu n">
+        <img src="images/magnific_plat-malagasy-traditional_2948138111.png" alt="Plat 5">
+        <h3 data-key="plat5">Plat 5</h3>
+        <p class="prix">-20$</p>
+        <p data-key="plat5_det">
+          -Bon bouffe
+        </p>
+      </div>
+
+      <!--sixieme plat-->
+
+      <div class="menu n">
+        <img src="images/magnific_plat-malagasy-colorful-ma_2948138091.png" alt="Plat6">
+        <h3 data-key="plat6">Plat 6</h3>
+        <p class="prix">-25$</p>
+        <p data-key="plat6_det">
+          -Spécialité Gasy
+        </p>
+
+
+      </div>
+
+      <!--Septieme plat-->
+      <div class="menu n">
+        <img src="images\magnific_plat-malagasy-rustic-mala_2948138105.png" alt="Plat7">
+        <h3 data-key="plat7">Plat 7</h3>
+        <p class="prix">-30$</p>
+        <p data-key="plat7_det">
+          -Spécialité Gasy
+        </p>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+
+  <script>
+
+
+  </script>
+
+  <section id="apropos">
+    <h2 data-key="apropos-titre">À propos</h2>
+    <div class="div">
+      <img class="chef" src="images/chef.jpg" alt="image du chef">
+      <p data-key="chef">Fondé en 1990 par Ratsimandresy Sylvanno ,chef diplomé en art culinaire ayant suivi des
+        formations dans le
+        domaine culinaire et gastronomique,diplomé en cuisine avancée ,ayant contribué à la création de la prestigieuse
+        école
+        de restauration de Madagasikara , il a crée le restaurant où l'on voit aujourd'hui les meilleurs plats du pays.
+      </p>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-key="contact-titre">Contactez-moi</h2>
+
+    <p data-key="date-prefix" id="date-du-jour" style="text-align: center; font-weight: bold; color: #d35400;"></p>
+
+    <form action="https://formspree.io/f/xwvyrokg" method="POST">
+      <!-- AJOUTE l'attribut 'name' à chaque champ, c'est CRUCIAL -->
+      <input type="text" name="nom" data-key="placeholder-nom" placeholder="Votre nom" required>
+      <input type="email" name="email" data-key="placeholder-email" placeholder="Votre email" required>
+      <textarea name="message" data-key="placeholder-message" placeholder="Votre message" required></textarea>
+      <input type="date" name="date_reservation" required>
+      <input type="number" name="nombre_personnes" data-key="placeholder-nb-personnes" placeholder="Nombre de personnes" min="1"
+        required>
+      <button type="submit" data-key="btn-envoyer">Envoyer</button>
+    </form>
+  </section>
+
+
+  <footer>
+    <p>© 2026-🌐Soavimasoandro Avenue Shelby  </p>
+  </footer>
+
+  <script>
+    // On récupère la date actuelle
+    const maintenant = new Date();
+
+    //  Formatage en français (ex: samedi 9 mai 2026)
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateFormatee = maintenant.toLocaleDateString('fr-FR', options);
+
+    // Insertion du texte dans la balise avec l'id "date-du-jour"
+    document.getElementById('date-du-jour').textContent = " Nous sommes le " + dateFormatee;
+
+
+    // --- 1. DICTIONNAIRE DE TRADUCTION ---
+    const translations = {
+      'fr': {
+        'nav-accueil': 'Accueil',
+        'nav-menu': 'Menu',
+        'nav-apropos': 'À propos',
+        'nav-contact': 'Contact',
+        'accueil-titre': "Bienvenue au Gourmet - L'art de la cuisine malagasy",
+        'btn-reserver': 'Réserver une table',
+        'apropos-titre': 'À propos de nous',
+        'contact-titre': 'Contactez-moi',
+        'date-prefix': 'Nous sommes le ',
+        'plat1': 'Poulet au parmesan',
+        'plat1_det': 'Spécialité locale au niveau de sa tendresse',
+        'plat2': 'Riz au poulet',
+        'plat2_det': 'Plat traditionnel malagasy avec du riz et du poulet',
+        'plat3': 'Salo de riz',
+        'plat3_det': 'Salo de riz avec des légumes et une sauce spéciale',
+        'plat4': 'Hena ritra',
+        'plat4_det': 'Plat local avec une viande tendre et une sauce délicieuse',
+        'plat5': 'Poulet à la mangue',
+        'plat5_det': 'Poulet grillé avec une sauce à la mangue',
+        'plat6': 'Riz aux légumes',
+        'plat6_det': 'Riz cuit avec des légumes frais et une sauce spéciale',
+        'plat7': 'Salo de riz au poulet',
+        'plat7_det': 'Salo de riz avec du poulet et des légumes',
+        'chef': "Fondé en 1990 par Ratsimandresy Sylvanno ,chef diplomé en art culinaire ayant suivi des formations dans le domaine culinaire et gastronomique,diplomé en cuisine avancée ,ayant contribué à la création de la prestigieuse école de restauration de Madagasikara , il a crée le restaurant où l'on voit aujourd'hui les meilleurs plats du pays.",
+        'placeholder-name': 'Votre nom',
+        'placeholder-email': 'Votre email',
+        'placeholder-message': 'Votre message',
+        'placeholder-nb-personnes': 'Nombre de personnes',
+        'btn-envoyer': 'Envoyer'
+      },
+
+      'en': {
+        'nav-accueil': 'Home',
+        'nav-menu': 'Menu',
+        'nav-apropos': 'About',
+        'nav-contact': 'Contact',
+        'accueil-titre': "Welcome to Gourmet - The art of Malagasy cuisine",
+        'btn-reserver': 'Book a table',
+        'apropos-titre': 'About Us',
+        'contact-titre': 'Contact Me',
+        'date-prefix': 'Today is ',
+        'plat1': "Chicken with Parmesan",
+        'plat1_det': "A delicious chicken dish with a crispy exterior and tender interior, served with a side of Parmesan cheese.",
+        'plat2': "Rice with Chicken",
+        'plat2_det': "A traditional Malagasy dish with rice and chicken",
+        'plat3': "Salo de Riz",
+        'plat3_det': "Salo de riz with vegetables and special sauce",
+        'plat4': "Hena Ritra",
+        'plat4_det': "A local dish with tender meat and delicious sauce",
+        'plat5': "Chicken with Mango",
+        'plat5_det': "Grilled chicken with mango sauce",
+        'plat6': "Rice with Vegetables",
+        'plat6_det': "Cooked rice with fresh vegetables and special sauce",
+        'plat7': "Salo de Riz with Chicken",
+        'plat7_det': "Salo de riz with chicken and vegetables",
+        'chef': "Founded in 1990 by Ratsimandresy Sylvanno, a culinary arts graduate who underwent extensive training in the culinary and gastronomic fields. As a specialist with an advanced culinary degree and a key contributor to the creation of Madagascar's prestigious catering school, he established this restaurant where you can experience the country's finest dishes today.",
+        'placeholder-nom': 'Your name',
+        'placeholder-email': 'Your email',
+        'placeholder-message': 'Your message',
+        'placeholder-nb-personnes': 'Number of people',
+        'btn-envoyer': 'Send'
+      },
+      'mg': {
+        'nav-accueil': 'Fandraisana',
+        'nav-menu': 'Sakafo',
+        'nav-apropos': 'Mombamomba',
+        'nav-contact': 'Fifandraisana',
+        'accueil-titre': "Tongasoa ato amin'ny Gourmet - Ny kanto ny nahandro malagasy",
+        'btn-reserver': 'Hamandrika latabatra',
+        'apropos-titre': 'Mombamomba anay',
+        'contact-titre': 'Mifandraisa amiko',
+        'date-prefix': 'Androany dia ',
+        'plat1': "Akoho nasiana Parmesan",
+        'plat1_det': "Hena ritra mampiditra ny kanto ny nahandro malagasy",
+        'plat2': "Riz amin'ny akoho",
+        'plat2_det': "Hena traditional malagasy miaraka amin'ny rizy sy ny akoho",
+        'plat3': "Salo de Riz",
+        'plat3_det': "Salo de riz miaraka amin'ny vegetala sy ny sarin'ny hena",
+        'plat4': "Hena Ritra",
+        'plat4_det': "Hena an-tany miaraka amin'ny vondrona sy ny sarin'ny hena",
+        'plat5': "Akoho amin'ny mangaly",
+        'plat5_det': "Akoho voatanteraka miaraka amin'ny sarin'ny mangaly",
+        'plat6': "Riz amin'ny vegetala",
+        'plat6_det': "Riz voatanteraka miaraka amin'ny vegetala sy ny sarin'ny hena",
+        'plat7': "Salo de Riz amin'ny akoho",
+        'plat7_det': "Salo de riz miaraka amin'ny akoho sy ny vegetala",
+        'chef': "Niorina tamin'ny taona 1990, tamin'ny alalan'i Ratsimandresy Sylvanno, lehiben'ny mpahandro nahazo diplaoma amin'ny kanto ara-tsakafo ary nanaraka fiofanana manokana teo amin'ny sehatry ny nahandro sy ny gastronomia. Noho ny fahaiza-manaony amin'ny nahandro avo lenta sy ny fandraisany anjara tamin'ny fananganana ny sekoly ambony momba ny fandraisana vahiny sy ny fandrahoana sakafo eto Madagasikara, dia namorona ity trano fisakafoanana ity izy, izay ahitana ireo sakafo matsiro indrindra eto amin'ny firenena ankehitriny.",
+        'placeholder-nom': 'Ny anaranao',
+        'placeholder-email': 'Ny mailakanao',
+        'placeholder-message': 'Ny hafatrao',
+        'placeholder-nb-personnes': "Isan'ny olona",
+        'btn-envoyer': 'Alefa'
+      },
+
+      'km': {
+        'nav-accueil': 'Mapuhoni',
+        'nav-menu': 'Zilyo',
+        'nav-apropos': 'Husu sisi',
+        'nav-contact': 'Wasiliana',
+        'accueil-titre': "Karibu Gourmet - Ya fani ya mapishi ya Malagasy",
+        'btn-reserver': 'Hifadhi meza',
+        'apropos-titre': 'Husu sisi',
+        'contact-titre': 'Nisilianne',
+        'date-prefix': 'Leo tsi ',
+        'plat1': 'Nkuhu na parmesan',
+        'plat1_det': 'Mapishi ya mtaa ya dundruka',
+        'plat2': 'Mtsahare na nkuhu',
+        'plat2_det': 'Zilyo za tangu kale za Malagasy',
+        'plat3': 'Saladi ya mtsahare',
+        'plat3_det': 'Mtsahare na mboga na sausi maalum',
+        'plat4': 'Hena ritra',
+        'plat4_det': 'Nyama ya dundruka na sausi ndzuzuri',
+        'plat5': 'Nkuhu na mangana',
+        'plat5_det': 'Nkuhu ya rashiwa na sausi ya mangana',
+        'plat6': 'Mtsahare na mboga',
+        'plat6_det': 'Mtsahare na mboga mbichi na sausi',
+        'plat7': 'Saladi ya mtsahare na nkuhu',
+        'plat7_det': 'Saladi ya mtsahare na nkuhu na mboga',
+        'chef': "Yatsidziwa ya mwaka wa 1990 na Ratsimandresy Sylvanno, shefu ya parwa shahada ya fani ya mapishi. Ya tsiha rasta ino, mwa amba leo u djo dji djo hula zilyo ndzuzuri za ntsi.",
+        'placeholder-nom': 'Dzina laho',
+        'placeholder-email': 'Barua laho',
+        'placeholder-message': 'Ujumbe waho',
+        'placeholder-nb-personnes': 'Idadi ya wandru',
+        'btn-envoyer': 'Pveha'
+      },
+
+      'es': {
+        'nav-accueil': 'Inicio',
+        'nav-menu': 'Menú',
+        'nav-apropos': 'Nosotros',
+        'nav-contact': 'Contacto',
+        'accueil-titre': "Bienvenidos al Gourmet - El arte de la cocina malgache",
+        'btn-reserver': 'Reservar mesa',
+        'apropos-titre': 'Sobre nosotros',
+        'contact-titre': 'Contáctame',
+        'date-prefix': 'Hoy es ',
+        'plat1': 'Pollo al parmesano',
+        'plat1_det': 'Especialidad local por su ternura',
+        'plat2': 'Arroz con pollo',
+        'plat2_det': 'Plato tradicional malgache',
+        'plat3': 'Ensalada de arroz',
+        'plat3_det': 'Arroz con verduras y salsa especial',
+        'plat4': 'Hena ritra',
+        'plat4_det': 'Carne tierna con salsa deliciosa',
+        'plat5': 'Pollo al mango',
+        'plat5_det': 'Pollo a la parrilla con salsa de mango',
+        'plat6': 'Arroz con verduras',
+        'plat6_det': 'Arroz con verduras frescas',
+        'plat7': 'Ensalada de arroz y pollo',
+        'plat7_det': 'Arroz con pollo y verduras',
+        'chef': "Fundado en 1990 por Ratsimandresy Sylvanno, chef graduado en artes culinarias. Colaborador en la creación de la prestigiosa escuela de hostelería de Madagascar, fundó este restaurante donde se sirven los mejores platos del país.",
+        'placeholder-nom': 'Tu nombre',
+        'placeholder-email': 'Tu correo electrónico',
+        'placeholder-message': 'Tu mensaje',
+        'placeholder-nb-personnes': 'Número de personas',
+        'btn-envoyer': 'Enviar'
+      },
+      'zh': {
+        'nav-accueil': '首页',
+        'nav-menu': '菜单',
+        'nav-apropos': '关于我们',
+        'nav-contact': '联系我们',
+        'accueil-titre': "欢迎来到美食家 - 马达加斯加烹饪艺术",
+        'btn-reserver': '预订座位',
+        'apropos-titre': '关于我们',
+        'contact-titre': '联系我',
+        'date-prefix': '今天是 ',
+        'plat1': '帕尔马干酪鸡',
+        'plat1_det': '以其肉质鲜嫩而闻名的当地特色菜',
+        'plat2': '鸡肉饭',
+        'plat2_det': '马达加斯加传统米饭加鸡肉',
+        'plat3': '米饭沙拉',
+        'plat3_det': '搭配蔬菜和特制酱料的米饭沙拉',
+        'plat4': 'Hena ritra',
+        'plat4_det': '肉质鲜嫩、酱汁鲜美的当地菜肴',
+        'plat5': '芒果鸡',
+        'plat5_det': '配有芒果酱的烤鸡',
+        'plat6': '蔬菜饭',
+        'plat6_det': '搭配新鲜蔬菜和特制酱汁的米饭',
+        'plat7': '鸡肉米饭沙拉',
+        'plat7_det': '含有鸡肉和蔬菜的米饭沙拉',
+        'chef': "由 Ratsimandresy Sylvanno 于 1990 年创立，他是一位在烹饪和美食领域接受过广泛培训的烹饪艺术毕业生。作为马达加斯加著名餐饮学校创建的关键贡献者，他创办了这家餐厅，如今您可以在这里品尝到该国最顶级的菜肴。",
+        'placeholder-nom': '您的姓名',
+        'placeholder-email': '您的电子邮件',
+        'placeholder-message': '您的留言',
+        'placeholder-nb-personnes': '人数',
+        'btn-envoyer': '发送'
+      },
+
+      'ja': {
+        'nav-accueil': 'ホーム',
+        'nav-menu': 'メニュー',
+        'nav-apropos': '会社概要',
+        'nav-contact': 'お問い合わせ',
+        'accueil-titre': "ル・グルメへようこそ - マダガスカル料理の芸術",
+        'btn-reserver': '席を予約する',
+        'apropos-titre': '私たちについて',
+        'contact-titre': 'お問い合わせ',
+        'date-prefix': '本日は ',
+        'plat1': 'パルメザンチキン',
+        'plat1_det': 'その柔らかさで知られる地元の名物料理',
+        'plat2': 'チキンライス',
+        'plat2_det': 'ライスと鶏肉を使ったマダガスカルの伝統料理',
+        'plat3': 'ライスサラダ',
+        'plat3_det': '野菜と特製ソースのライスサラダ',
+        'plat4': 'ヘナ・リトラ',
+        'plat4_det': '柔らかい肉と美味しいソースの郷土料理',
+        'plat5': 'マンゴーチキン',
+        'plat5_det': 'マンゴーソースを添えたグリルチキン',
+        'plat6': '野菜ライス',
+        'plat6_det': '新鮮な野菜と特製ソースで炊いたご飯',
+        'plat7': 'チキンライスサラダ',
+        'plat7_det': '鶏肉と野菜のライスサラダ',
+        'chef': "1990年にラツィマンドレシ・シルヴァ/によって設立されました。料理芸術の卒業生であり、マダガスカルの有名な料理学校の創設に貢献したスペシャリストである彼が、国内最高の料理を体験できるこのレストランを立ち上げました。",
+        'placeholder-nom': 'お名前',
+        'placeholder-email': 'メールアドレス',
+        'placeholder-message': 'メッセージ',
+        'placeholder-nb-personnes': '人数',
+        'btn-envoyer': '送信'
+      }
+
+    };
+
+    // --- 2. FONCTIONS DE MISE À JOUR ---
+
+    function updateContent(lang) {
+    document.querySelectorAll('[data-key]').forEach(element => {
+        const key = element.getAttribute('data-key');
+        const traduction = translations[lang][key];
+
+        if (traduction) {
+            // CONDITION : On vérifie si c'est un champ de saisie
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                // On change l'attribut placeholder
+                element.placeholder = traduction;
+            } else {
+                // Pour le reste (h1, p, button, a), on change le texte
+                element.textContent = traduction;
+            }
+        }
+    });
+
+    // N'oublie pas de mettre à jour la date et de sauvegarder la langue !
+    updateDate(lang);
+    localStorage.setItem('selectedLang', lang);
+}
+    function updateDate(lang) {
+      const maintenant = new Date();
+      const locales = { 'fr': 'fr-FR', 'en': 'en-GB', 'mg': 'mg-MG' };
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const dateFormatee = maintenant.toLocaleDateString(locales[lang] || 'fr-FR', options);
+
+      const prefix = translations[lang]['date-prefix'] || "Nous sommes le ";
+      document.getElementById('date-du-jour').textContent = prefix + dateFormatee;
+    }
+
+    // --- 3. ÉVÉNEMENTS & PERSISTANCE ---
+
+    const langSwitcher = document.getElementById('lang-switcher');
+    const darkBtn = document.getElementById('dark-mode-toggle');
+
+    // Au chargement de la page
+    window.addEventListener('DOMContentLoaded', () => {
+      // Charger la langue sauvegardée
+      const savedLang = localStorage.getItem('selectedLang') || 'fr';
+      langSwitcher.value = savedLang;
+      updateContent(savedLang);
+
+      // Charger le thème sauvegardé
+      const savedTheme = localStorage.getItem('selectedTheme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        darkBtn.textContent = "☀️";
+      }
+    });
+
+    // Changer la langue
+    langSwitcher.addEventListener('change', (e) => {
+      updateContent(e.target.value);
+    });
+
+    // Changer le mode sombre
+    darkBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+      const isDark = document.body.classList.contains('dark-theme');
+      darkBtn.textContent = isDark ? "☀️" : "🌙";
+      localStorage.setItem('selectedTheme', isDark ? 'dark' : 'light');
+    });
+
+  </script>
+</body>
+
+</html>

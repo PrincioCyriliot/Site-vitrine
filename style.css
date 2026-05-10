@@ -1,0 +1,351 @@
+/* 1. Reset et Variables de base */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Playfair Display;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fixer une largeur minimale aux boutons pour éviter les sauts de texte */
+
+.reserve, button[type="submit"] {
+    min-width: 200px; /* Ajuste selon tes besoins */
+    white-space: nowrap; /* Empêche le texte de passer sur deux lignes */
+}
+
+/* pour que les nav-controls ne poussent pas le menu */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0; /* Empêche cette zone de rétrécir */
+}
+
+/* 2. Header & Navigation */
+header {
+    background-color: gold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 5%; /* Padding horizontal pour aérer */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permet au menu de passer en dessous si besoin */
+    gap: 10px;
+}
+
+nav img {
+    width: 60px; /* Taille fixe pour éviter les surprises */
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    flex-wrap: wrap; /* Les liens se mettent les uns sous les autres sur petit écran */
+    justify-content: center;
+}
+
+/* Sur mobile très petit */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 2%;
+    }
+    nav ul {
+        gap: 10px;
+        font-size: 0.9rem; /* On réduit un peu la taille du texte */
+    }
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000; /* Noir pour la lisibilité sur le jaune */
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav li a:hover {
+    color: yellow ;
+    text-shadow: 15px 20px 8px rgba(255, 255, 255, 0.8);
+    
+}
+
+/* 3. Sections & Titres */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Couleurs Mode Sombre (Dark Mode) */
+body.dark-theme {
+    background-color: #121212; /* Gris anthracite profond */
+    color: #ddd7d7fd;            /* Blanc cassé pour ne pas agresser les yeux */
+}
+
+body.dark-theme header, 
+body.dark-theme footer {
+    background-color: #1a1a1a; /* Plus sombre que le gold habituel */
+    border-bottom: 2px solid gold;
+}
+
+body.dark-theme .menu {
+    background-color: #1e1e1e;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-theme nav ul li a {
+    color: gold;
+}
+/* Style de base pour le sélecteur */
+#lang-switcher {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Transition douce pour le changement de couleur */
+}
+
+/* --- Adaptations pour le Mode Sombre --- */
+
+body.dark-theme #lang-switcher {
+    background-color: #333; /* Fond gris foncé */
+    color: white;           /* Texte blanc */
+    border-color: gold;
+}
+
+/* Pour être sûr que les options à l'intérieur sont lisibles */
+body.dark-theme #lang-switcher option {
+    background-color: #333;
+    color: white;
+}
+
+#accueil a {
+    text-decoration: none;
+}
+
+/* Style des contrôles dans le nav */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#lang-switcher {
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.TITRE {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 4. Menu Section (Grille de plats) */
+.menus {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 20px 15px; 
+    scroll-behavior: smooth;
+    -webkit_overflow-scrolling: touch;
+}
+.menus::-webkit-scrollbar {
+    height: 8px;
+
+}
+.menus::-webkit-scrollbar-thumb {
+    background-color: gold;
+    border-radius: 10px;
+}
+
+.menu {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    /*width: 300px; /* Flexible */
+    flex: 0 0 320px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+   /* transition: transform 0.5s ease, box-shadow 0.5s ease;*/
+   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.menu img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Évite de déformer les photos de plats */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.menu h3{
+    matgin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+.prix {
+    font-weight: bold;
+    color: #d35400; /* Une couleur qui rappelle la cuisine */
+    font-size: 1.2rem;
+}
+
+/* Animation de focus sur les menus */
+.menus:hover .menu:not(:hover) {
+    filter: blur(3px) grayscale(0.5);
+    transform: scale(0.92);
+    opacity: 0.6;
+}
+
+.menus .menu:hover{
+opacity: 1;
+filter: grayscale(0);
+transform: scale(1.05);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18) ;
+z-index: 2;
+}
+
+.menus:not(:hover) .menu:hover {
+    filter: none;
+    transform: none;
+}
+
+.menu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+.menus:hover .menu{
+    opacity:0.8;
+    filter:grayscale(0.3);
+    transform:scale(0.98);
+}
+/* 5. Section À Propos (Chef) */
+.div {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.chef {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid gold;
+}
+
+/* 6. Formulaire & Boutons */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto; /* Centre le formulaire */
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    background-color: gold;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 20px auto; /* Centre le bouton */
+}
+
+button:hover {
+    background-color: #ffcc00;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* 7. Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: gold;
+    margin-top: 50px;
+}
+@media (max-width: 768px) {
+    .menu{
+       flex: 0 0 280px;
+    }
+}
+@media (max-width: 480px){
+    .menu{
+        flex: 0 0 85vw
+    }
+}
+input:focus, textarea:focus{
+outline: none;
+border: 2px solid gold;
+box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .div {
+        flex-direction: column; /* L'image passe au-dessus du texte */
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .chef {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+}
